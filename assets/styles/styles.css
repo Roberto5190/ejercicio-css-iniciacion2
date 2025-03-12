@@ -3,7 +3,8 @@ header {
   justify-content: center;
   background: rgb(30, 30, 30);
   text-align: center;
-  padding: 20px;
+  padding: 1rem 2rem;
+  width: 100%;
 }
 header .header_center {
   width: 1180px;
@@ -18,6 +19,7 @@ header .header_center .header_left #titulo {
 header .header_center .header_left .name {
   font-weight: 300;
   color: rgb(148, 148, 148);
+  white-space: nowrap;
 }
 header .header_center nav ul {
   list-style: none;
@@ -39,62 +41,95 @@ header .header_center nav ul li i {
   color: rgb(139, 40, 221);
   margin-right: 5px;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+header .header_center .icon_menu {
+  display: none;
 }
-
-body {
-  font-family: "Inter", Arial, sans-serif;
+header .header_center .icon_menu i {
+  color: rgb(139, 40, 221);
 }
 
 #proyectos {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
 }
-#proyectos .proyecto {
+#proyectos .proyectos_center {
+  width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+#proyectos .proyectos_center .proyecto {
   background: white;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  box-shadow: 4px 4px 5px rgba(54, 0, 116, 0.137);
   padding: 15px;
-  width: 300px;
+  width: 250px;
+  height: auto;
   margin: 20px;
-  text-align: center;
 }
-#proyectos .proyecto img {
+#proyectos .proyectos_center .proyecto .proyecto_img {
+  width: 220px;
+  height: 180px;
+  transition: opacity 250ms ease-in-out;
+}
+#proyectos .proyectos_center .proyecto .proyecto_img img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
-  transition: opacity 0.3s ease-in-out;
 }
-#proyectos .proyecto img:hover {
+#proyectos .proyectos_center .proyecto .proyecto_img img:hover {
   opacity: 0.5;
 }
-#proyectos .proyecto h2::first-letter {
+#proyectos .proyectos_center .proyecto .card_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#proyectos .proyectos_center .proyecto .card_text .card_title {
+  font-weight: 900;
+}
+#proyectos .proyectos_center .proyecto .card_text .card_title::first-letter {
   font-size: 24px;
-  color: red;
 }
-#proyectos .proyecto:nth-child(3n) {
-  background: lightgray;
+#proyectos .proyectos_center .proyecto .card_text .card_description {
+  font-size: 14px;
+  margin-top: 0.25rem;
+  color: rgb(179, 179, 179);
 }
-#proyectos .proyecto.destacado {
+#proyectos .proyectos_center .proyecto .card_text .card_button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+}
+#proyectos .proyectos_center .proyecto:nth-child(3n) {
+  background: rgb(236, 236, 236);
+}
+#proyectos .proyectos_center .proyecto.destacado {
   background: yellow;
 }
+#proyectos .proyectos_center .proyecto.destacado .card_description {
+  color: rgb(187, 187, 9);
+}
 
+#contacto {
+  background-color: rgb(30, 30, 30);
+  padding: 2rem;
+}
 #contacto h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: rgb(139, 40, 221);
 }
 #contacto form {
   max-width: 90%;
   max-width: 600px;
   margin: auto;
   padding: 20px;
+  color: white;
 }
 #contacto form input,
 #contacto form textarea {
@@ -116,6 +151,29 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Inter", Arial, sans-serif;
+  scrollbar-width: thin;
+  -webkit-scrollbar-width: thin;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
@@ -148,18 +206,26 @@ footer #subir {
 
 @media (max-width: 768px) {
   header {
-    padding: 10px;
+    width: 100vw;
+    padding: 0.5rem 1rem;
   }
-  header nav ul li {
+  header .header_center .header_left #titulo {
+    font-size: 20px;
+  }
+  header .header_center .header_left .name {
+    font-size: 0.75rem;
+  }
+  header .header_center nav {
+    display: none;
+  }
+  header .header_center .icon_menu {
     display: block;
-    margin: 10px 0;
   }
-  #proyectos {
-    flex-direction: column;
-    align-items: center;
+  header .header_center .icon_menu i {
+    color: rgb(139, 40, 221);
   }
-  form {
-    max-width: 100%;
-    padding: 15px;
-  }
+}
+form {
+  max-width: 100%;
+  padding: 15px;
 }/*# sourceMappingURL=styles.css.map */

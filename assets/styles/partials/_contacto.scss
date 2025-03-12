@@ -1,0 +1,48 @@
+@use '../lib/vars' as *;
+@use '../lib/mixins' as *;
+
+#contacto {
+    background-color: $color-fondo-header;
+    padding: 2rem;
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: $color-hover;
+    }
+
+    form {
+        max-width: 90%;
+        max-width: $max-width-form;
+        margin: auto;
+        padding: 20px;
+
+        color: white;
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .input-verde[type="email"] {
+            border: 2px solid $color-borde-email;
+        }
+
+        textarea {
+            &:focus {
+                outline: 2px solid $color-focus-textarea;
+            }
+        }
+
+        button {
+            background: $color-hover;
+            color: $color-texto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
