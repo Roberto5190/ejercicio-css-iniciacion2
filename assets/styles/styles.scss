@@ -1,0 +1,215 @@
+// 🎨 Variables Globales
+$color-fondo-header: rgb(30, 30, 30);
+$color-texto: white;
+$color-hover: purple;
+$color-destacado: yellow;
+$color-borde-email: green;
+$color-focus-textarea: blue;
+$color-boton: black;
+$max-width-form: 600px;
+$box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+// 🎨 Mixin para animaciones
+@mixin transition($property, $time) {
+    transition: $property $time ease-in-out;
+}
+
+// 📦 Mixin para box-sizing
+@mixin box-sizing {
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// 🌟 Mixin para centrar contenido flex
+@mixin center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// Aplicando modelo de caja a todo
+@include box-sizing;
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background: $color-fondo-header;
+    text-align: center;
+    padding: 20px;
+
+    #titulo {
+        font-family: Georgia, serif;
+        color: $color-texto;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin: 0 15px;
+
+                a {
+                    color: $color-texto;
+                    text-decoration: none;
+                    @include transition(color, 0.3s);
+
+                    &:hover {
+                        color: $color-hover;
+                    }
+                }
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+#proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+
+    .proyecto {
+        background: white;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+        padding: 15px;
+        width: 300px;
+        margin: 20px;
+        text-align: center;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            @include transition(opacity, 0.3s);
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        h2 {
+            &::first-letter {
+                font-size: 24px;
+                color: red;
+            }
+        }
+
+        &:nth-child(3n) {
+            background: lightgray;
+        }
+
+        &.destacado {
+            background: $color-destacado;
+        }
+    }
+}
+
+#contacto {
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-width: 90%;
+        max-width: $max-width-form;
+        margin: auto;
+        padding: 20px;
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .input-verde[type="email"] {
+            border: 2px solid $color-borde-email;
+        }
+
+        textarea {
+            &:focus {
+                outline: 2px solid $color-focus-textarea;
+            }
+        }
+
+        button {
+            background: $color-hover;
+            color: $color-texto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+footer {
+    background: url('textura.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100px;
+    @include center-content;
+    text-align: center;
+
+    p {
+        text-decoration: underline red;
+    }
+
+    .mensaje-secreto {
+        display: none;
+    }
+
+    #subir {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: $color-boton;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+
+
+// Media Query para dispositivos móviles
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+
+        nav ul {
+            li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    #proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
