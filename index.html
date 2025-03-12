@@ -2,17 +2,19 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
-    <link rel="stylesheet" href="/assets/styles/styles.css.map">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css.map" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        rel="stylesheet" />
+
 </head>
 
 <body>
@@ -28,8 +30,12 @@
                 <nav>
                     <ul>
                         <li><i class="fas fa-star"></i><a href="#inicio">Inicio</a></li>
-                        <li><i class="fas fa-star"></i><a href="#proyectos">Proyectos</a></li>
-                        <li><i class="fas fa-star"></i><a href="#contacto">Contacto</a></li>
+                        <li>
+                            <i class="fas fa-star"></i><a href="#proyectos">Proyectos</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i><a href="#contacto">Contacto</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -37,18 +43,15 @@
                 <div class="icon_menu">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-
             </div>
-
         </header>
 
         <!--  Sección 2: Tarjetas de Proyectos -->
         <section id="proyectos">
             <div class="proyectos_center">
-                
                 <article class="proyecto destacado">
                     <div class="proyecto_img">
-                        <img src="./assets/img/proyecto1.jpg" alt="Proyecto 1">
+                        <img src="./assets/img/proyecto1.jpg" alt="Proyecto 1" />
                     </div>
 
                     <div class="card_text">
@@ -60,18 +63,20 @@
 
                 <article class="proyecto destacado">
                     <div class="proyecto_img">
-                        <img src="./assets/img/proyecto2.jpg" alt="Proyecto 2">
+                        <img src="./assets/img/proyecto2.jpg" alt="Proyecto 2" />
                     </div>
                     <div class="card_text">
                         <h2 class="card_title">Proyecto 2</h2>
-                        <p class="card_description">Este es un ejemplo de otro proyecto.</p>
+                        <p class="card_description">
+                            Este es un ejemplo de otro proyecto.
+                        </p>
                         <button class="card_button">Ver proyecto</button>
                     </div>
                 </article>
 
                 <article class="proyecto">
                     <div class="proyecto_img">
-                        <img src="./assets/img/proyecto3.jpg" alt="Proyecto 3">
+                        <img src="./assets/img/proyecto3.jpg" alt="Proyecto 3" />
                     </div>
 
                     <div class="card_text">
@@ -83,7 +88,7 @@
 
                 <article class="proyecto">
                     <div class="proyecto_img">
-                        <img src="./assets/img/proyecto4.jpg" alt="Proyecto 4">
+                        <img src="./assets/img/proyecto4.jpg" alt="Proyecto 4" />
                     </div>
 
                     <div class="card_text">
@@ -95,19 +100,21 @@
 
                 <article class="proyecto">
                     <div class="proyecto_img">
-                        <img src="./assets/img/proyecto5.jpg" alt="Proyecto 5">
+                        <img src="./assets/img/proyecto5.jpg" alt="Proyecto 5" />
                     </div>
 
                     <div class="card_text">
                         <h2 class="card_title">Proyecto 5</h2>
-                        <p class="card_description">Proyecto con interactividad innovadora.</p>
+                        <p class="card_description">
+                            Proyecto con interactividad innovadora.
+                        </p>
                         <button class="card_button">Ver proyecto</button>
                     </div>
                 </article>
 
                 <article class="proyecto">
                     <div class="proyecto_img">
-                        <img src="./assets/img/proyecto6.jpg" alt="Proyecto 6">
+                        <img src="./assets/img/proyecto6.jpg" alt="Proyecto 6" />
                     </div>
 
                     <div class="card_text">
@@ -117,7 +124,6 @@
                     </div>
                 </article>
             </div>
-
         </section>
 
         <!-- Sección 3: Formulario de Contacto -->
@@ -126,14 +132,14 @@
             <form>
                 <label>
                     Nombre:
-                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Nombre" required />
                 </label>
-                
+
                 <label>
                     Correo:
-                    <input type="email" placeholder="Correo" class="input-verde" required>
+                    <input type="email" placeholder="Correo" class="input-verde" required />
                 </label>
-                
+
                 <label>
                     Mensaje:
                     <textarea placeholder="Mensaje"></textarea>
@@ -150,7 +156,6 @@
             <button id="subir">Subir</button>
         </footer>
     </div>
-
 
     <script src="/app/script.js"></script>
 </body>
