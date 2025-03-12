@@ -1,0 +1,40 @@
+@use '../lib/vars' as *;
+@use '../lib/mixins' as *;
+
+
+footer {
+    background-image: url("/assets/img/textura.jpg");
+    background-size: cover;
+    height: 100px;
+    @include center-content;
+    text-align: center;
+
+    p {
+        color: white;
+        text-decoration: underline red;
+    }
+
+    .mensaje-secreto {
+        display: none;
+    }
+
+    .subir {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: $color-boton;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: .75rem;
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover{
+            cursor: pointer;
+            background: $color-primario;
+            color: rgb(249, 237, 255);
+        }
+    }
+
+}

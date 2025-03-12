@@ -3,6 +3,7 @@
 @use 'partials/header';
 @use 'partials/proyectos';
 @use 'partials/contacto';
+@use 'partials/footer';
 
 
 
@@ -35,39 +36,6 @@ body {
 
 
 
-
-
-
-
-footer {
-    background: url('textura.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100px;
-    @include center-content;
-    text-align: center;
-
-    p {
-        text-decoration: underline red;
-    }
-
-    .mensaje-secreto {
-        display: none;
-    }
-
-    #subir {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: $color-boton;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 10;
-    }
-}
-
-
 // Media Query para dispositivos móviles
 @media (max-width: 768px) {
     header {
@@ -97,17 +65,17 @@ footer {
                 display: block;
 
                 i {
-                    color: $color-hover;
+                    color: $color-primario;
                 }
             }
         }
 
     }
+
+    #proyectos{
+        @include center-content;
+    }
 }
 
 
-form {
-    max-width: 100%;
-    padding: 15px;
-}
 

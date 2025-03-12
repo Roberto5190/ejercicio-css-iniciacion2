@@ -6,180 +6,206 @@ header {
   padding: 1rem 2rem;
   width: 100%;
 }
-
 header .header_center {
   width: 1180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 header .header_center .header_left #titulo {
   font-family: Georgia, serif;
   color: white;
 }
-
 header .header_center .header_left .name {
   font-weight: 300;
   color: rgb(148, 148, 148);
   white-space: nowrap;
 }
-
 header .header_center nav ul {
   list-style: none;
   padding: 0;
 }
-
 header .header_center nav ul li {
   display: inline-block;
   margin: 0 15px;
 }
-
 header .header_center nav ul li a {
   color: white;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
-
 header .header_center nav ul li a:hover {
-  color: rgb(139, 40, 221);
+  color: rgb(155, 25, 235);
 }
-
 header .header_center nav ul li i {
-  color: rgb(139, 40, 221);
+  color: rgb(155, 25, 235);
   margin-right: 5px;
 }
-
 header .header_center .icon_menu {
   display: none;
 }
-
 header .header_center .icon_menu i {
-  color: rgb(139, 40, 221);
+  color: rgb(155, 25, 235);
 }
 
 #proyectos {
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 20px;
+  margin: 4rem 0;
 }
-
 #proyectos .proyectos_center {
   width: 1180px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
   gap: 1.5rem;
 }
-
-#proyectos .proyectos_center .proyecto {
-  background: white;
-  border-radius: 24px;
-  box-shadow: 4px 4px 5px rgba(54, 0, 116, 0.137);
+#proyectos .proyectos_center .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 15px;
   width: 250px;
   height: auto;
   margin: 20px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 4px 4px 5px rgba(54, 0, 116, 0.137);
 }
-
-#proyectos .proyectos_center .proyecto .proyecto_img {
+#proyectos .proyectos_center .card .card_img {
   width: 220px;
   height: 180px;
   transition: opacity 250ms ease-in-out;
 }
-
-#proyectos .proyectos_center .proyecto .proyecto_img img {
+#proyectos .proyectos_center .card .card_img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
-
-#proyectos .proyectos_center .proyecto .proyecto_img img:hover {
+#proyectos .proyectos_center .card .card_img img:hover {
   opacity: 0.5;
 }
-
-#proyectos .proyectos_center .proyecto .card_text {
+#proyectos .proyectos_center .card .card_text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
   margin-top: 1rem;
 }
-
-#proyectos .proyectos_center .proyecto .card_text .card_title {
+#proyectos .proyectos_center .card .card_text .card_title {
   font-weight: 900;
 }
-
-#proyectos .proyectos_center .proyecto .card_text .card_title::first-letter {
+#proyectos .proyectos_center .card .card_text .card_title::first-letter {
   font-size: 24px;
 }
-
-#proyectos .proyectos_center .proyecto .card_text .card_description {
+#proyectos .proyectos_center .card .card_text .card_description {
   font-size: 14px;
   margin-top: 0.25rem;
   color: rgb(179, 179, 179);
 }
-
-#proyectos .proyectos_center .proyecto .card_text .card_button {
+#proyectos .proyectos_center .card .card_text .card_button {
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
+  border: none;
   border-radius: 0.75rem;
+  background: linear-gradient(136deg, rgb(155, 25, 235) 0%, rgb(69, 24, 125) 100%);
+  color: white;
+  font-weight: 550;
 }
-
-#proyectos .proyectos_center .proyecto:nth-child(3n) {
+#proyectos .proyectos_center .card .card_text .card_button:hover {
+  cursor: pointer;
+  background: rgb(155, 25, 235);
+  color: rgb(249, 237, 255);
+}
+#proyectos .proyectos_center .card:nth-child(3n) {
   background: rgb(236, 236, 236);
 }
-
-#proyectos .proyectos_center .proyecto.destacado {
+#proyectos .proyectos_center .card.destacado {
   background: yellow;
 }
-
-#proyectos .proyectos_center .proyecto.destacado .card_description {
-  color: rgb(187, 187, 9);
+#proyectos .proyectos_center .card.destacado .card_description {
+  color: rgb(169, 169, 22);
 }
 
 #contacto {
   background-color: rgb(30, 30, 30);
-  padding: 2rem;
+  padding: 4rem 0;
+  border-radius: 2rem 2rem 0 0;
 }
-
 #contacto h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: rgb(139, 40, 221);
+  color: rgb(155, 25, 235);
 }
-
 #contacto form {
   max-width: 90%;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
   color: white;
 }
-
+#contacto form label {
+  color: rgb(221, 171, 240);
+  margin-bottom: 0.5rem;
+}
 #contacto form input,
 #contacto form textarea {
   width: 100%;
   padding: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
   border-radius: 5px;
 }
-
-#contacto form .input-verde[type=email] {
-  border: 2px solid green;
-}
-
-#contacto form textarea:focus {
-  outline: 2px solid blue;
-}
-
 #contacto form button {
-  background: rgb(139, 40, 221);
+  background: linear-gradient(136deg, rgb(155, 25, 235) 0%, rgb(69, 24, 125) 100%);
+  color: white;
+  font-weight: 550;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#contacto form button:hover {
+  cursor: pointer;
+  background: rgb(155, 25, 235);
+  color: rgb(249, 237, 255);
+}
+
+footer {
+  background-image: url("/assets/img/textura.jpg");
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer p {
+  color: white;
+  -webkit-text-decoration: underline red;
+          text-decoration: underline red;
+}
+footer .mensaje-secreto {
+  display: none;
+}
+footer .subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(136deg, rgb(155, 25, 235) 0%, rgb(69, 24, 125) 100%);
   color: white;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.75rem;
   cursor: pointer;
+  z-index: 10;
+}
+footer .subir:hover {
+  cursor: pointer;
+  background: rgb(155, 25, 235);
+  color: rgb(249, 237, 255);
 }
 
 *,
@@ -205,67 +231,29 @@ body {
   height: 100%;
 }
 
-footer {
-  background: url("textura.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-footer p {
-  -webkit-text-decoration: underline red;
-  text-decoration: underline red;
-}
-
-footer .mensaje-secreto {
-  display: none;
-}
-
-footer #subir {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: black;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 10;
-}
-
 @media (max-width: 768px) {
   header {
     width: 100vw;
     padding: 0.5rem 1rem;
   }
-
   header .header_center .header_left #titulo {
     font-size: 20px;
   }
-
   header .header_center .header_left .name {
     font-size: 0.75rem;
   }
-
   header .header_center nav {
     display: none;
   }
-
   header .header_center .icon_menu {
     display: block;
   }
-
   header .header_center .icon_menu i {
-    color: rgb(139, 40, 221);
+    color: rgb(155, 25, 235);
   }
-}
-
-form {
-  max-width: 100%;
-  padding: 15px;
-}
-
-/*# sourceMappingURL=styles.css.map */
+  #proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

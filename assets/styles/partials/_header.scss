@@ -47,12 +47,12 @@ header {
                         @include transition(color, 0.3s);
 
                         &:hover {
-                            color: $color-hover;
+                            color: $color-primario;
                         }
                     }
 
                     i {
-                        color: $color-hover;
+                        color: $color-primario;
                         margin-right: 5px;
                     }
                 }
@@ -65,7 +65,7 @@ header {
 
             i{
                 
-                color: $color-hover;
+                color: $color-primario;
             }
         }
     }

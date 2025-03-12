@@ -1,11 +1,11 @@
 // 🎨 Variables Globales
 $color-fondo-header: rgb(30, 30, 30);
 $color-texto: white;
-$color-hover: rgb(139, 40, 221);
+$color-primario: rgb(155, 25, 235);
 $color-destacado: yellow;
 $color-borde-email: green;
 $color-focus-textarea: blue;
-$color-boton: black;
+$color-boton: linear-gradient(136deg, rgb(155, 25, 235) 0%, rgb(69, 24, 125) 100%);
 $max-width-form: 600px;
 $box-shadow: 4px 4px 5px rgba(54, 0, 116, 0.137);
 $screen-width: 1180px;

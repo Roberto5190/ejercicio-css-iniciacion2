@@ -3,46 +3,53 @@
 
 #contacto {
     background-color: $color-fondo-header;
-    padding: 2rem;
+    padding: 4rem 0;
+    border-radius: 2rem 2rem 0 0;
+
     h2 {
         text-align: center;
         margin-bottom: 20px;
-        color: $color-hover;
+        color: $color-primario;
     }
 
     form {
         max-width: 90%;
         max-width: $max-width-form;
-        margin: auto;
+        margin: 0 auto;
         padding: 20px;
 
         color: white;
+
+        label{
+            color: rgb(221, 171, 240);
+            margin-bottom: .5rem;        }
 
         input,
         textarea {
             width: 100%;
             padding: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
+            margin-top: .5rem;
             border-radius: 5px;
         }
 
-        .input-verde[type="email"] {
-            border: 2px solid $color-borde-email;
-        }
 
-        textarea {
-            &:focus {
-                outline: 2px solid $color-focus-textarea;
-            }
-        }
+
 
         button {
-            background: $color-hover;
+            background: $color-boton;
             color: $color-texto;
-            padding: 10px;
+            font-weight: 550;
+            padding: .5rem 1.5rem;
             border: none;
-            border-radius: 5px;
+            border-radius: .5rem;
             cursor: pointer;
+
+            &:hover{
+                cursor: pointer;
+                background: $color-primario;
+                color: rgb(249, 237, 255);
+            }
         }
     }
 }
