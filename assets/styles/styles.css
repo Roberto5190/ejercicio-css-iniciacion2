@@ -1,40 +1,55 @@
-*, *::before, *::after {
+header {
+  display: flex;
+  justify-content: center;
+  background: rgb(30, 30, 30);
+  text-align: center;
+  padding: 20px;
+}
+header .header_center {
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_center .header_left #titulo {
+  font-family: Georgia, serif;
+  color: white;
+}
+header .header_center .header_left .name {
+  font-weight: 300;
+  color: rgb(148, 148, 148);
+}
+header .header_center nav ul {
+  list-style: none;
+  padding: 0;
+}
+header .header_center nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+header .header_center nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+header .header_center nav ul li a:hover {
+  color: rgb(139, 40, 221);
+}
+header .header_center nav ul li i {
+  color: rgb(139, 40, 221);
+  margin-right: 5px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background: rgb(30, 30, 30);
-  text-align: center;
-  padding: 20px;
-}
-header #titulo {
-  font-family: Georgia, serif;
-  color: white;
-}
-header nav ul {
-  list-style: none;
-  padding: 0;
-}
-header nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-header nav ul li a:hover {
-  color: purple;
-}
-header nav ul li i {
-  margin-right: 5px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 #proyectos {
@@ -81,7 +96,8 @@ header nav ul li i {
   margin: auto;
   padding: 20px;
 }
-#contacto form input, #contacto form textarea {
+#contacto form input,
+#contacto form textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -94,7 +110,7 @@ header nav ul li i {
   outline: 2px solid blue;
 }
 #contacto form button {
-  background: purple;
+  background: rgb(139, 40, 221);
   color: white;
   padding: 10px;
   border: none;

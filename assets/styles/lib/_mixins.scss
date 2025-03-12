@@ -1,0 +1,11 @@
+// 🎨 Mixin para animaciones
+@mixin transition($property, $time) {
+    transition: $property $time ease-in-out;
+}
+
+// 🌟 Mixin para centrar contenido flex
+@mixin center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
