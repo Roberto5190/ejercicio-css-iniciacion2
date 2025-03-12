@@ -174,7 +174,7 @@ header .header_center .icon_menu i {
 }
 
 footer {
-  background-image: url("/assets/img/textura.jpg");
+  background-image: url("../img/textura.jpg");
   background-size: cover;
   height: 100px;
   display: flex;
